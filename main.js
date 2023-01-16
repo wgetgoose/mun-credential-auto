@@ -21,17 +21,17 @@ var lines = []
 
 // Makes programs hang like a motherfucker
 loadLines = function() {
-  var reading = matrix.readln()
-  $.writeln(reading)
   // $.writeln(readLine)
-  $.writeln(matrix.eof)
-  for (var i = false; i != true;) {
+  for (var i = 0; i < 5; i++) {
+    var reading = matrix.readln()
+    $.writeln(reading)
+    $.writeln(matrix.eof)
     if (matrix.eof == true) {
       $.writeln("End of file")
-      i = true
+      i = 10
     }
     else {
-      $.writeln("Moving!")
+      $.writeln("Moving! Interation number " + i)
       // i = true // without this, it hangs photoshop and VSCode
     }
   }

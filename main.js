@@ -5,9 +5,10 @@
     For future Docs, hello! If you need to email me for help, try carson@carsonferreira.com
 
     Notes: 
-        - "let" variables do not work with Photoshop, use "var". "const" works as normal.
-        - Arrow functions are not supported
-        - File paths need to be forward slashed
+        - ExtendScript (what Adobe uses to script its programs) is based on ECMAScript 3, meaning newer JS features do not work 
+            - "let" variables do not work with Photoshop, use "var". "const" works as normal.
+            - Arrow functions are not supported
+        - File paths use forward slashes (use dialogs instead of definite paths)
 
  */
 
@@ -19,8 +20,6 @@ matrix.open("r")
 
 // Store each line of CSV as array
 var csv = []
-
-// Fill CSV array
 for (var i = true; i == true;) {
   var currentLine = matrix.readln()
   csv[csv.length] = currentLine

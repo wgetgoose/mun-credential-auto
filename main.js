@@ -13,25 +13,21 @@
 
 // Asks the user to select the PSD and CSV
 // var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
+// app.open(averyTemplate)
 var matrix = File.openDialog(["Please open the matrix CSV file"],["CSV:*.csv"])
 matrix.open("r")
 
-var lines = []
+// Store each line of CSV as array
+var csv = []
 
-loadLines = function() {
-  for (var i = true; i == true;) {
-    var reading = matrix.readln()
-    $.writeln(reading)
-    $.writeln("End of file: " + matrix.eof)
-    if (matrix.eof == true) {
-      $.writeln("End of file!")
-      i = false
-    }
-    else {
-      $.writeln("Moving! Iterating --> " + i)
-    }
+// Fill CSV array
+for (var i = true; i == true;) {
+  var currentLine = matrix.readln()
+  csv[csv.length] = currentLine
+  if (matrix.eof == true) {
+    $.writeln("End of file!")
+    i = false
   }
-  return
 }
 
-loadLines()
+$.writeln(csv)

@@ -29,13 +29,21 @@ for (var i = true; i == true;) {
   }
 }
 
-$.writeln(csv.length)
+// split array into separate arrays
+var headers = csv[0].split(",")
+var length = (csv.length - 1)
+var countries = []
+
+for (var i = 1; i < length; i++) {
+  countries[(i - 1)] = csv[i].split(",")
+}
+$.writeln((countries[0])[0])
 
 // Psuedocode !!!
 
 /* 
 For the first line of the CSV file, also known as csv[0]
-  
+  1.   
 
 
 */

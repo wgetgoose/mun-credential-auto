@@ -13,9 +13,9 @@
  */
 
 // Asks the user to select the PSD and CSV
-// var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
-// app.open(averyTemplate)
+var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
 var matrix = File.openDialog(["Please open the matrix CSV file"],["CSV:*.csv"])
+app.open(averyTemplate)
 matrix.open("r")
 
 // Store each line of CSV as array
@@ -24,26 +24,14 @@ for (var i = true; i == true;) {
   var currentLine = matrix.readln()
   csv[csv.length] = currentLine
   if (matrix.eof == true) {
-    $.writeln("End of file!")
     i = false
   }
 }
 
-// split array into separate arrays
+// split initial array into separate arrays (rewrite this comment later)
 var headers = csv[0].split(",")
 var length = (csv.length - 1)
 var countries = []
-
 for (var i = 1; i < length; i++) {
   countries[(i - 1)] = csv[i].split(",")
 }
-$.writeln((countries[0])[0])
-
-// Psuedocode !!!
-
-/* 
-For the first line of the CSV file, also known as csv[0]
-  1.   
-
-
-*/

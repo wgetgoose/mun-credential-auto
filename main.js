@@ -29,4 +29,13 @@ for (var i = true; i == true;) {
   }
 }
 
-$.writeln(csv)
+$.writeln(csv.length)
+
+// Psuedocode !!!
+
+/* 
+For the first line of the CSV file, also known as csv[0]
+  
+
+
+*/

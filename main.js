@@ -29,9 +29,7 @@ for (var i = true; i == true;) {
 }
 
 // split initial array into separate arrays (rewrite this comment later)
-var headers = csv[0].split(",")
-var length = (csv.length - 1)
 var countries = []
-for (var i = 1; i < length; i++) {
-  countries[(i - 1)] = csv[i].split(",")
+for (var i = 0; i < (csv.length - 1); i++) {
+  countries[i] = csv[i].split(",")
 }

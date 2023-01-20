@@ -12,24 +12,35 @@
 
  */
 
-// Asks the user to select the PSD and CSV
 var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
 var matrix = File.openDialog(["Please open the matrix CSV file"],["CSV:*.csv"])
-app.open(averyTemplate)
+
+// remembers the document to perform layer operations
+// without this, the object model does not work
+var doc = app.open(averyTemplate)
+
+// Open matrix file to perform array operations
 matrix.open("r")
 
 // Store each line of CSV as array
 var csv = []
-for (var i = true; i == true;) {
+do {
   var currentLine = matrix.readln()
   csv[csv.length] = currentLine
-  if (matrix.eof == true) {
-    i = false
-  }
-}
+} while (matrix.eof == false)
 
-// split initial array into separate arrays (rewrite this comment later)
+// split csv array into an array of arrays
+// each array within countries is formatted as: countries[row][committee number]
 var countries = []
 for (var i = 0; i < (csv.length - 1); i++) {
   countries[i] = csv[i].split(",")
+}
+
+var currentCountry // globally accessible
+var currentCommittee = 0 // static for now
+
+for (currentCountry = 1; currentCountry <= 8; currentCountry++) {
+  var country = doc.artLayers.getByName(("Country " + currentCountry))
+  country.textItem.contents = countries[1][0]
+  break;
 }

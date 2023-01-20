@@ -14,10 +14,10 @@
 
 var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
 var matrix = File.openDialog(["Please open the matrix CSV file"],["CSV:*.csv"])
+var savePath = Folder.selectDialog(["Please select the folder to save files in"])
 
 // remembers the document to perform layer operations
 // without this, the object model does not work
-var doc = app.open(averyTemplate)
 
 // Open matrix file to perform array operations
 matrix.open("r")
@@ -40,12 +40,26 @@ for (var i = 0; i < (csv.length - 1); i++) {
 // for loop only iterates 8 times. to keep track of 
 // committees with 40+ countries, variables need to remember
 // what country we're on
-var currentCountry = 0
+var currentCountry = 1
 var currentCommittee = 0
 
-for (index = 1; index <= 8; index++) {
-  var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
-  countryLayer.contents = countries[index][currentCommittee]
-  var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
-  committeeLayer.contents = countries[0][currentCommittee]
+function fillDoc() {
+  for (index = 1; index <= 8; index++) {
+    var doc = app.open(averyTemplate)
+    var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
+    countryLayer.contents = countries[currentCountry][currentCommittee]
+    var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
+    committeeLayer.contents = countries[0][currentCommittee]
+    currentCountry++
+  }
+  var pdfOptions = new PDFSaveOptions()
+  var saveFile = new File((savePath + "/Credential" + Date.now() + ".pdf"))
+  doc.saveAs(saveFile, pdfOptions)
 }
+fillDoc()
+
+
+// do {
+//   fillDoc()
+// } while( (countries[currentCountry][currentCommittee]) !== null)
+

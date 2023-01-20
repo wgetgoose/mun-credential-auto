@@ -36,11 +36,16 @@ for (var i = 0; i < (csv.length - 1); i++) {
   countries[i] = csv[i].split(",")
 }
 
-var currentCountry // globally accessible
-var currentCommittee = 0 // static for now
+// These need to be separate from the index because the
+// for loop only iterates 8 times. to keep track of 
+// committees with 40+ countries, variables need to remember
+// what country we're on
+var currentCountry = 0
+var currentCommittee = 0
 
-for (currentCountry = 1; currentCountry <= 8; currentCountry++) {
-  var country = doc.artLayers.getByName(("Country " + currentCountry))
-  country.textItem.contents = countries[1][0]
-  break;
+for (index = 1; index <= 8; index++) {
+  var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
+  countryLayer.contents = countries[index][currentCommittee]
+  var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
+  committeeLayer.contents = countries[0][currentCommittee]
 }

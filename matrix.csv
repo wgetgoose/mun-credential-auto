@@ -1,7 +1,7 @@
 NARCS Adv.,UNEP Adv.,WHO Adv.,UNICEF Mixed,UNOOSA Mixed,Womens Mixed,UNHRC Mixed,IAEA Nov.,1st DISEC Nov.,ECOSOC Nov.,NARCS Nov.,NATO Nov.,UNEP Nov.,UNICEF Nov.,WHO Nov.,UNHCR Nov.,ICC,EoW Adv.,HSC Adv.,SC Adv.,SC Nov.,Crisis 1: Trojans,Crisis 2: Greeks
-Afghanistan,Argentina,Argentina,Argentina,Argentina,Afghanistan,Argentina,Argentina,Argentina,Angola,Afghanistan,Albania,Algeria,Argentina,Argentina,Argentina,Justice 1,England,US,US,US,Paris,Odysseus
-Argentina,Australia,Australia,Australia,Australia,Bangladesh,Armenia,Armenia,Australia,Armenia ,Argentina,Belgium,Argentina,Australia,Australia,Australia,Justice 2,France,UK,UK,UK,Priam,Menelaus
-Bolivia,Brazil,Belgium,Brazil,Brazil,Bulgaria,Benin,Belarus,Brazil,Australia,Bolivia,Bulgaria ,Australia,Brazil,Brazil,Brazil,Justice 3,Austria-Hungary,Russia,Russia,Russia,Hector,Agamemnon
+Afghanistan,Argentina,Argentina,Argentina,Argentina,Afghanistan,Argentina,Argentina,Argentina,Angola,Afghanistan,Albania,Algeria,Argentina,Argentina,Argentina,Justice 1,England,United States,United States,United States,Paris,Odysseus
+Argentina,Australia,Australia,Australia,Australia,Bangladesh,Armenia,Armenia,Australia,Armenia,Argentina,Belgium,Argentina,Australia,Australia,Australia,Justice 2,France,United Kingdom,United Kingdom,United Kingdom,Priam,Menelaus
+Bolivia,Brazil,Belgium,Brazil,Brazil,Bulgaria,Benin,Belarus,Brazil,Australia,Bolivia,Bulgaria,Australia,Brazil,Brazil,Brazil,Justice 3,Austria-Hungary,Russia,Russia,Russia,Hector,Agamemnon
 Brazil,Canada,Brazil,Canada,Canada,Burkina Faso,Bolivia,Belgium,Canada,Bangladesh,Brazil,Canada,Brazil,Canada,Canada,Canada,Justice 4,Ottoman Empire,France,France,France,Hecuba,Achilles
 Canada,Chile,Canada,Chile,Chile,Cameroon,Brazil,Brazil,Chile,Brazil,Canada,Croatia,Canada,Chile,Chile,Chile,Justice 5,Italy,China,China,China,Andromache,Helen
 Chile,China,Chile,China,China,China,Cameroon ,Bulgaria,China,Canada,Chile,Czech Republic,Chile,China,China,China,Justice 6,Germany,Argentina,Albania,Albania,Cassandra,Nestor
@@ -13,8 +13,8 @@ Dominican Republic,Germany,France,Germany,Germany,Eritrea,Eritrea,DPRK,Germany,E
 DR Congo,Greece,Germany,Greece,Greece,Finland,Finalnd,Finland,Greece,Finland,DR Congo,Hungary,Germany,Greece,Greece,Greece,Justice 12,,Rwanda,Kenya,Kenya,Anchises,Ascalaphus/Ialmenus
 Ecuador,India,Greece,India,India,France,France,France,India,France,Ecuador,Iceland,Greece,India,India,India,Justice 13,,New Zealand,Mexico,Mexico,Creusa,Menestheus
 Egypt,Iran,India,Iran,Iran,Gabon,Gabon,Germany,Iran,Germany,Egypt,Italy,India,Iran,Iran,Iran,Justice 14,,Djibouti,Norway,Norway,Pandarus/Pandar,"Acamas, Son of Theseus"
-France,Ireland,Iran,Ireland,Ireland,The Gambia,The Gambia,Hungary,Ireland,Ghana,France,Latvia ,Iran,Ireland,Ireland,Ireland,Justice 15,,Pakistan,UAE,UAE,Archelochus,Demophon
-Haiti,Israel,Israel,Israel,Israel,Germany,Germany,India,Israel,India,Haiti,Lithuania ,Israel,Israel,Israel,Israel,,,,,,"Acamas, Son of Antenor",Sthenelus
+France,Ireland,Iran,Ireland,Ireland,The Gambia,The Gambia,Hungary,Ireland,Ghana,France,Latvia,Iran,Ireland,Ireland,Ireland,Justice 15,,Pakistan,UAE,UAE,Archelochus,Demophon
+Haiti,Israel,Israel,Israel,Israel,Germany,Germany,India,Israel,India,Haiti,Lithuania,Israel,Israel,Israel,Israel,,,,,,"Acamas, Son of Antenor",Sthenelus
 Iceland,Italy,Italy,Italy,Italy,Guyana,Honduras,Iran,Italy,Iran,Iceland,Luxembourg,Italy,Italy,Italy,Italy,,,,,,Adrestus,Euryalus
 India,Japan,Japan,Japan,Japan,India,India,Israel,Japan,Ireland,India,Montenegro,Japan,Japan,Japan,Japan,,,,,,Asius,Agapenor
 Indonesia,Kenya,Kenya,Kenya,Kenya,Ireland,Indonesia,Italy,Kenya,Israel,Indonesia,Netherlands,Kenya,Kenya,Kenya,Kenya,,,,,,Amphius,Meges
@@ -27,16 +27,16 @@ Malaysia,Pakistan,Oman,Pakistan,Pakistan,Norway,Netherlands,Mexico,Pakistan,Neth
 Mexico,Ukrai,Pakistan,Panama,Panama,Poland,Pakistan,Netherlands,Panama,Nicaragua,Malaysia,Slovenia ,Panama,Panama,Panama,Panama,,,,,,,
 Netherlands,Peru,Peru,Peru,Peru,Qatar,Paraguay,Pakistan,Peru,Paraguay,Mexico,Spain,Peru,Peru,Peru,Peru,,,,,,,
 New Zealand,Philippines,Philippines,Philippines,Philippines,Senegal,Poland,South Korea,Philippines,Peru,Netherlands,Turkey,Philippines,Philippines,Philippines,Philippines,,,,,,,
-Nigeria,Portugal,Portugal,Portugal,Portugal,South Africa,Qatar,Romania,Portugal,Philippines,New Zealand,UK,Portugal,Portugal,Portugal,Portugal,,,,,,,
-Norway,Russian Fed,Russian Fed,Russian Fed,Russian Fed,South Korea,Russian Fed,Russian Fed,Russian Fed,Russian Fed,Nigeria,US,Russian Fed,Russian Fed,Russian Fed,Russian Fed,,,,,,,
+Nigeria,Portugal,Portugal,Portugal,Portugal,South Africa,Qatar,Romania,Portugal,Philippines,New Zealand,United Kingdom,Portugal,Portugal,Portugal,Portugal,,,,,,,
+Norway,Russian Fed.,Russian Fed.,Russian Fed.,Russian Fed.,South Korea,Russian Fed.,Russian Fed.,Russian Fed.,Russian Fed.,Nigeria,United States,Russian Fed.,Russian Fed.,Russian Fed.,Russian Fed.,,,,,,,
 Paraguay,Saudi Arabia,Saudi Arabia,Saudi Arabia,Saudi Arabia,Switzerland,Senegal ,Slovakia,Saudi Arabia,Saudi Arabia,Norway,,Saudi Arabia,Saudi Arabia,Saudi Arabia,Saudi Arabia,,,,,,,
 Pakistan,Somalia,Somalia,Somalia,Somalia,Thailand,Somalia,Slovenia,Somalia,South Korea,Pakistan,,Somalia,Somalia,Somalia,Somalia,,,,,,,
-Russian Fed,South Africa,South Africa,South Africa,South Africa,UAE,South Korea,South Africa,South Africa,Spain,Paraguay,,South Africa,South Africa,South Africa,South Africa,,,,,,,
-South Africa,South Korea,South Korea,South Korea,South Korea,US,Sudan,Spain,South Korea,Sudan,Russian Fed,,South Korea,South Korea,South Korea,South Korea,,,,,,,
+Russian Fed.,South Africa,South Africa,South Africa,South Africa,UAE,South Korea,South Africa,South Africa,Spain,Paraguay,,South Africa,South Africa,South Africa,South Africa,,,,,,,
+South Africa,South Korea,South Korea,South Korea,South Korea,United States,Sudan,Spain,South Korea,Sudan,Russian Fed.,,South Korea,South Korea,South Korea,South Korea,,,,,,,
 Spain,Spain,Spain,Spain,Spain,Zimbabwe,UAE,Sweden,Spain,Switzerland,South Africa,,Spain,Spain,Spain,Spain,,,,,,,
-UK,Switzerland,Switzerland,Switzerland,Switzerland,,UK,UK,Switzerland,Thailand,Spain,,Switzerland,Switzerland,Switzerland,Switzerland,,,,,,,
-Uruguay,Thailand,UAE,Thailand,Thailand,,Ukraine,Ukraine,Syria,Togo,UK,,Thailand,Thailand,Thailand,Thailand,,,,,,,
-US,UK,UK,UK,UK,,Ukraine,United Arab Emirates,UK,Ukraine,Uruguay,,UK,UK,UK,UK,,,,,,,
-Venezuela,US,US,US,US,,Uzbekistan ,US,US,Uruguay,US,,US,US,US,US,,,,,,,
-Vietnam,Vietnam,Vietnam,Vietnam,Vietnam,,Venezuela,Venezuela,Vietnam,US,Venezuela,,Vietnam,Vietnam,Vietnam,Vietnam,,,,,,,
+United Kingdom,Switzerland,Switzerland,Switzerland,Switzerland,,United Kingdom,United Kingdom,Switzerland,Thailand,Spain,,Switzerland,Switzerland,Switzerland,Switzerland,,,,,,,
+Uruguay,Thailand,UAE,Thailand,Thailand,,Ukraine,Ukraine,Syria,Togo,United Kingdom,,Thailand,Thailand,Thailand,Thailand,,,,,,,
+United States,United Kingdom,United Kingdom,United Kingdom,United Kingdom,,Ukraine,UAE,United Kingdom,Ukraine,Uruguay,,United Kingdom,United Kingdom,United Kingdom,United Kingdom,,,,,,,
+Venezuela,United States,United States,United States,United States,,Uzbekistan,United States,United States,Uruguay,United States,,United States,United States,United States,United States,,,,,,,
+Vietnam,Vietnam,Vietnam,Vietnam,Vietnam,,Venezuela,Venezuela,Vietnam,United States,Venezuela,,Vietnam,Vietnam,Vietnam,Vietnam,,,,,,,
 ,,,,,,,,,,Vietnam,,,,,,,,,,,,

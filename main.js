@@ -44,35 +44,33 @@ var running = true
 
 // yikes
 function fillDoc() {
-  for (index = 1; index <= 8; index++) {
-    if (currentCountry == (countries.length - 1)) {
-      if (index == 1) {
-        $.writeln("returning")
-        return;
+  for (currentCountry; currentCountry < countries.length;) {
+    for (index = 1; index <= 8; index++) {
+      $.writeln("Current country is " + currentCountry + " and index is " + index)
+      if (currentCountry == (countries.length - 1)) {
+        if (index == 1) {
+          return;
+        }
+        else {
+          break;
+        }
       }
-      else {
-        $.writeln("breaking")
-        break;
+      var doc = app.open(averyTemplate) // remember opened doc
+      var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
+      countryLayer.contents = countries[currentCountry][currentCommittee]
+      var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
+      committeeLayer.contents = countries[0][currentCommittee]
+      currentCountry++
       }
-    }
-    var doc = app.open(averyTemplate) // remember opened doc
-    var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
-    countryLayer.contents = countries[currentCountry][currentCommittee]
-    var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
-    committeeLayer.contents = countries[0][currentCommittee]
-    currentCountry++
-    $.writeln("Current country is " + currentCountry + "and index is" + index)
+      var pdfOptions = new PDFSaveOptions()
+      var saveFile = new File((savePath + "/Credential" + Date.now() + ".pdf"))
+      doc.saveAs(saveFile, pdfOptions)
+      doc.close()
   }
-  var pdfOptions = new PDFSaveOptions()
-  var saveFile = new File((savePath + "/Credential" + Date.now() + ".pdf"))
-  doc.saveAs(saveFile, pdfOptions)
-  doc.close()
 }
 
-for (currentCountry; currentCountry < countries.length;) {
-  fillDoc()
-}
 
+fillDoc()
 
 // for (var i = 0; i < (countries[0].length); i++) {
 //   currentCommittee++

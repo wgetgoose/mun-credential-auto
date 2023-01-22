@@ -1,15 +1,15 @@
 /* 
-
     MUN Nametag/Credential Automater Script by Carson Ferreira. Coded in January 2023.
 
     For future Docs, hello! If you need to email me for help, try carson@carsonferreira.com
-
+    !!! Usage Rules !!!:
+      - Make sure you format the spreadsheet export to not include any blank columns
+      - If the committee name contains special characters, the file saving section may break
     Notes: 
         - ExtendScript (what Adobe uses to script its programs) is based on ECMAScript 3, meaning newer JS features do not work 
             - "let" variables do not work with Photoshop, use "var". "const" works as normal.
             - Arrow functions are not supported
         - File paths use forward slashes (use dialogs instead of definite paths)
-
  */
 
 var averyTemplate = File.openDialog(["Please select the template document"],["Photoshop Document:*.psd"])
@@ -40,14 +40,14 @@ for (var i = 0; i < (csv.length); i++) {
 // what country we're on
 var currentCountry = 1
 var currentCommittee = 0
-var running = true
+var counter = 0
 
-// yikes
+// parent loop moves through the function for every country in the given committee (countries.length)
+// nested loop iterates 8 times to represent the number of available slots on the template
 function fillDoc() {
   for (currentCountry; currentCountry < countries.length;) {
-    for (index = 1; index <= 8; index++) {
-      $.writeln("Current country is " + currentCountry + " and index is " + index)
-      if (currentCountry == (countries.length - 1)) {
+    for (var index = 1; index <= 8; index++) {
+      if ( ( currentCountry == (countries.length - 1) ) || ( countries[currentCountry][currentCommittee] == "" ) ) {
         if (index == 1) {
           return;
         }
@@ -61,18 +61,18 @@ function fillDoc() {
       var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
       committeeLayer.contents = countries[0][currentCommittee]
       currentCountry++
-      }
-      var pdfOptions = new PDFSaveOptions()
-      var saveFile = new File((savePath + "/Credential" + Date.now() + ".pdf"))
-      doc.saveAs(saveFile, pdfOptions)
-      doc.close()
+    }
+    counter++
+    var pdfOptions = new PDFSaveOptions()
+    var saveFile = new File((savePath + "/Credential" + " " + (countries[0][currentCommittee]) + " " + counter + ".pdf"))
+    doc.saveAs(saveFile, pdfOptions)
+    doc.close()
   }
 }
 
-
-fillDoc()
-
-// for (var i = 0; i < (countries[0].length); i++) {
-//   currentCommittee++
-//   currentCountry = 1
-// }
+for (var i = 0; i < ( (countries[0]).length ); i++) {
+  fillDoc()
+  counter = 0
+  currentCommittee++
+  currentCountry = 1
+}

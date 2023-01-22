@@ -16,23 +16,21 @@ var averyTemplate = File.openDialog(["Please select the template document"],["Ph
 var matrix = File.openDialog(["Please open the matrix CSV file"],["CSV:*.csv"])
 var savePath = Folder.selectDialog(["Please select the folder to save files in"])
 
-// remembers the document to perform layer operations
-// without this, the object model does not work
-
 // Open matrix file to perform array operations
 matrix.open("r")
 
-// Store each line of CSV as array
+// Store each line of CSV as a string within an array
 var csv = []
 do {
   var currentLine = matrix.readln()
   csv[csv.length] = currentLine
 } while (matrix.eof == false)
 
-// split csv array into an array of arrays
-// each array within countries is formatted as: countries[row][committee number]
+// split each csv entry into a distinct array
+// each array within "countries" is formatted as: countries[row][column]
+// [column] is also the committee number (headers from left to right)
 var countries = []
-for (var i = 0; i < (csv.length - 1); i++) {
+for (var i = 0; i < (csv.length); i++) {
   countries[i] = csv[i].split(",")
 }
 
@@ -42,24 +40,41 @@ for (var i = 0; i < (csv.length - 1); i++) {
 // what country we're on
 var currentCountry = 1
 var currentCommittee = 0
+var running = true
 
+// yikes
 function fillDoc() {
   for (index = 1; index <= 8; index++) {
-    var doc = app.open(averyTemplate)
+    if (currentCountry == (countries.length - 1)) {
+      if (index == 1) {
+        $.writeln("returning")
+        return;
+      }
+      else {
+        $.writeln("breaking")
+        break;
+      }
+    }
+    var doc = app.open(averyTemplate) // remember opened doc
     var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
     countryLayer.contents = countries[currentCountry][currentCommittee]
     var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
     committeeLayer.contents = countries[0][currentCommittee]
     currentCountry++
+    $.writeln("Current country is " + currentCountry + "and index is" + index)
   }
   var pdfOptions = new PDFSaveOptions()
   var saveFile = new File((savePath + "/Credential" + Date.now() + ".pdf"))
   doc.saveAs(saveFile, pdfOptions)
+  doc.close()
 }
-fillDoc()
+
+for (currentCountry; currentCountry < countries.length;) {
+  fillDoc()
+}
 
 
-// do {
-//   fillDoc()
-// } while( (countries[currentCountry][currentCommittee]) !== null)
-
+// for (var i = 0; i < (countries[0].length); i++) {
+//   currentCommittee++
+//   currentCountry = 1
+// }

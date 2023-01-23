@@ -63,10 +63,11 @@ function fillDoc() {
       currentCountry++
     }
     counter++
-    var pdfOptions = new PDFSaveOptions()
-    var saveFile = new File((savePath + "/Credential" + " " + (countries[0][currentCommittee]) + " " + counter + ".pdf"))
-    doc.saveAs(saveFile, pdfOptions)
-    doc.close()
+    var jpegOptions = new JPEGSaveOptions()
+    jpegOptions.quality = 12
+    var jpegFile = File(savePath + "/" + "Credential" + " " + countries[0][currentCommittee] + " " + counter + ".jpeg")
+    app.activeDocument.saveAs(jpegFile, jpegOptions, true, Extension.LOWERCASE)
+    app.activeDocument.close(SaveOptions.DONOTSAVECHANGES)
   }
 }
 

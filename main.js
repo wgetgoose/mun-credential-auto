@@ -52,6 +52,12 @@ function fillDoc() {
           return;
         }
         else {
+          for (index; index <= 8; index++) {
+            var countryLayer = doc.artLayers.getByName(("Country " + index)).textItem
+            countryLayer.contents = " "
+            var committeeLayer = doc.artLayers.getByName(("Committee " + index)).textItem
+            committeeLayer.contents = countries[0][currentCommittee]
+          }
           break;
         }
       }

@@ -45,7 +45,7 @@ var counter = 0
 // parent loop moves through the function for every country in the given committee (countries.length)
 // nested loop iterates 8 times to represent the number of available slots on the template
 function fillDoc() {
-  for (currentCountry; currentCountry < countries.length;) {
+  for (currentCountry; currentCountry <= countries.length;) {
     for (var index = 1; index <= 8; index++) {
       if ( ( currentCountry == (countries.length - 1) ) || ( countries[currentCountry][currentCommittee] == "" ) ) {
         if (index == 1) {
